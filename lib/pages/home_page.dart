@@ -7,28 +7,28 @@ class HomePage extends StatelessWidget {
 
   final List<Food> foods = [
   Food(
-    name: 'Es Teh Manis',
-    image: 'assets/images/esteh.jpeg',
+    name: 'Tumis Toge',
+    image: 'assets/images/tumistoge.jpeg',
     description: 'Minuman segar pelepas dahaga dengan rasa manis yang pas.',
     price: 5000,
   ),
   Food(
-    name: 'Nasi Goreng Spesial',
-    image: 'assets/images/nasigoreng.jpeg',
+    name: 'Bakwan Jagung',
+    image: 'assets/images/bakwanjagung.jpeg',
     description: 'Nasi goreng dengan topping telur dan ayam suwir.',
-    price: 15000,
+    price: 5000,
   ),
   Food(
-    name: 'Mie Ayam',
-    image: 'assets/images/mieayam.jpeg',
+    name: 'Capcay',
+    image: 'assets/images/capcay.jpeg',
     description: 'Mie lembut disajikan dengan ayam manis gurih.',
-    price: 12000,
+    price: 6000,
   ),
   Food(
-    name: 'Ayam Geprek',
-    image: 'assets/images/ayamgeprek.jpeg',
+    name: 'Sayur Bening',
+    image: 'assets/images/sayurbening.jpeg',
     description: 'Ayam krispi dengan sambal pedas menggugah selera.',
-    price: 17000,
+    price: 5000,
   ),
 ];
 
@@ -36,7 +36,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Katalog Makanan'),
+        title: const Text('Katalog Menu'),
         backgroundColor: Colors.lightBlueAccent,
       ),
       body: GridView.builder(

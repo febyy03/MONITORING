@@ -7,15 +7,25 @@ class HistoryPage extends StatelessWidget {
   Widget build(BuildContext context) {
     // contoh data riwayat sederhana
     final List<String> historyItems = [
-      'Nasi Goreng Spesial - 22 Okt 2025',
-      'Es Teh Manis - 21 Okt 2025',
-      'Mie Ayam - 21 Okt 2025',
+      'Capcay - 22 Okt 2025',
+      'Sayur Bening - 21 Okt 2025',
+      'Tumis  Toge - 21 Okt 2025',
+      'Sayur Bening - 22 Okt 2025',
+      'Capcay - 22 Okt 2025',
+      'Bakwan Jagung - 22 Okt 2025',
+      'Tumis  Toge - 23 Okt 2025',
+      'Tumis  Toge - 23 Okt 2025',
+      'Tumis  Toge - 24 Okt 2025',
+      'Sayur Bening - 25 Okt 2025',
+      'Sayur Bening - 25 Okt 2025',
+      'Sayur Bening - 25 Okt 2025',
+      'Sayur Bening - 25 Okt 2025',
     ];
 
     return Scaffold(
       appBar: AppBar(
         title: const Text('Riwayat Pesanan'),
-        backgroundColor: Colors.orange,
+        backgroundColor: Colors.lightBlue,
       ),
       body: ListView.builder(
         itemCount: historyItems.length,

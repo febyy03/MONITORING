@@ -10,19 +10,40 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Katalog Makanan',
-      theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-        useMaterial3: true,
+ @override
+Widget build(BuildContext context) {
+  return MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: 'Katalog Menu',
+    theme: ThemeData(
+      primarySwatch: Colors.blueGrey,
+      useMaterial3: true,
+      
+      appBarTheme: const AppBarTheme(
+        // 1. Agar judul berada di TENGAH
+        centerTitle: true, 
+        
+        // 2. Mengatur gaya tulisan untuk judul
+        titleTextStyle: TextStyle(
+          color: Colors.white,            // Warna PUTIH
+          fontWeight: FontWeight.w900,    // SANGAT TEBAL (Extra Bold)
+          fontSize: 26,                   // Ukuran DIBESARKAN agar lebih menonjol
+          letterSpacing: 2.0,             // Jarak antar huruf DITAMBAH (memberi kesan modern/spacious)
+          shadows: [                      // Menambahkan efek bayangan (shadow) agar 3D/keren
+            Shadow(
+              blurRadius: 2.0, 
+              color: Colors.black54, 
+              offset: Offset(2, 2),
+            ),
+          ],
+        ),
       ),
-      home: const MainPage(),
-    );
-  }
+    ),
+    home: const MainPage(),
+  );
 }
+}
+
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

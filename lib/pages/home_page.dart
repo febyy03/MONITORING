@@ -1,55 +1,43 @@
 import 'package:flutter/material.dart';
 import '../models/katalok_model.dart';
 import 'detail_page.dart';
-import 'about_page.dart';
 
 class HomePage extends StatelessWidget {
   HomePage({super.key});
 
   final List<Food> foods = [
-    Food(
-      name: 'Es Teh Manis',
-      image: 'https://i.imgur.com/Qd8ZJzE.jpg',
-      description: 'Minuman segar pelepas dahaga dengan rasa manis yang pas.',
-      price: 5000,
-    ),
-    Food(
-      name: 'Nasi Goreng Spesial',
-      image: 'https://i.imgur.com/pXbG8K0.jpg',
-      description: 'Nasi goreng dengan topping telur dan ayam suwir.',
-      price: 15000,
-    ),
-    Food(
-      name: 'Mie Ayam',
-      image: 'https://i.imgur.com/8uIvUjw.jpg',
-      description: 'Mie lembut disajikan dengan ayam manis gurih.',
-      price: 12000,
-    ),
-    Food(
-      name: 'Ayam Geprek',
-      image: 'https://i.imgur.com/EyrQY8A.jpg',
-      description: 'Ayam krispi dengan sambal pedas menggugah selera.',
-      price: 17000,
-    ),
-  ];
+  Food(
+    name: 'Es Teh Manis',
+    image: 'assets/images/esteh.jpeg',
+    description: 'Minuman segar pelepas dahaga dengan rasa manis yang pas.',
+    price: 5000,
+  ),
+  Food(
+    name: 'Nasi Goreng Spesial',
+    image: 'assets/images/nasigoreng.jpeg',
+    description: 'Nasi goreng dengan topping telur dan ayam suwir.',
+    price: 15000,
+  ),
+  Food(
+    name: 'Mie Ayam',
+    image: 'assets/images/mieayam.jpeg',
+    description: 'Mie lembut disajikan dengan ayam manis gurih.',
+    price: 12000,
+  ),
+  Food(
+    name: 'Ayam Geprek',
+    image: 'assets/images/ayamgeprek.jpeg',
+    description: 'Ayam krispi dengan sambal pedas menggugah selera.',
+    price: 17000,
+  ),
+];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Katalog Makanan'),
-        backgroundColor: Colors.orange,
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.person),
-            onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const AboutPage()),
-              );
-            },
-          )
-        ],
+        backgroundColor: Colors.lightBlueAccent,
       ),
       body: GridView.builder(
         padding: const EdgeInsets.all(10),
@@ -81,7 +69,7 @@ class HomePage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(
-                    child: Image.network(
+                    child: Image.asset(
                       food.image,
                       fit: BoxFit.cover,
                       width: double.infinity,
@@ -92,7 +80,7 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       food.name,
                       style: const TextStyle(
-                        fontSize: 16,
+                        fontSize: 17,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -102,8 +90,8 @@ class HomePage extends StatelessWidget {
                     child: Text(
                       'Rp ${food.price.toStringAsFixed(0)}',
                       style: const TextStyle(
-                        fontSize: 14,
-                        color: Colors.orange,
+                        fontSize: 15,
+                        color: Colors.red,
                         fontWeight: FontWeight.w600,
                       ),
                     ),

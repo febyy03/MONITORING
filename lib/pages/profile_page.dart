@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class AboutPage extends StatelessWidget {
-  const AboutPage({super.key});
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Tentang Pembuat'),
+        title: const Text('Profil Saya'),
         backgroundColor: Colors.orange,
       ),
       body: const Center(
@@ -22,16 +22,22 @@ class AboutPage extends StatelessWidget {
               ),
               SizedBox(height: 20),
               Text(
-                'Nama: [Isi Nama Kamu]',
-                style: TextStyle(fontSize: 18),
+                'Nama: [Nama Kamu]',
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
               ),
               Text(
-                'Kelas: [Isi Kelas Kamu]',
-                style: TextStyle(fontSize: 18),
+                'Kelas: [Kelas Kamu]',
+                style: TextStyle(fontSize: 16),
               ),
               Text(
-                'NIM: [Isi NIM Kamu]',
-                style: TextStyle(fontSize: 18),
+                'NIM: [NIM Kamu]',
+                style: TextStyle(fontSize: 16),
+              ),
+              SizedBox(height: 20),
+              Text(
+                'Aplikasi ini dibuat menggunakan Flutter sebagai tugas UTS.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 14),
               ),
             ],
           ),

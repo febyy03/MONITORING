@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'pages/splash_screen.dart';
 import 'pages/home_page.dart';
 import 'pages/history_page.dart';
 import 'pages/profile_page.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
 Widget build(BuildContext context) {
   return MaterialApp(
     debugShowCheckedModeBanner: false,
-    title: 'Katalog Menu',
+    title: 'MY FOOD APP',
     theme: ThemeData(
       primarySwatch: Colors.blueGrey,
       useMaterial3: true,
@@ -39,7 +41,7 @@ Widget build(BuildContext context) {
         ),
       ),
     ),
-    home: const MainPage(),
+    home: const SplashScreen(),
   );
 }
 }
